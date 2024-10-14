@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #111111;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  @apply text-gray-950;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+}
+
+#root {
+  place-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+#root > main {
+  flex: 1;
+}
+
+#root > * {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bg-dashboard-img {
+  background-image: url("https://s3-alpha-sig.figma.com/img/a7ad/d563/1a1296588a7a290a58e8b7fe704a1bd4?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qxK30XZ7iz6zJKAvJFW5~nZcMt-dYwKLdmvX-KKlnZ0mey9C3an3XRPA35fNfOqZzUOGg3rNxfGsnZnDWDpn2M88t2XnMHR~eSOsrx~7uEC5wUz4CWb3fvWkpRqwrvWLJHyPUwHVIfdPpcoEAoVev9ZBG8axWO0etojnjMihJNTdUt0gcj2u8vdJyNUuI8ztTbkC0ez~KJB4AZGOaB0nckqgx-SKJPvsNJkUlZ2JpPT4M9C9QksYA8TVh2qpS-S86RZIRnLX~SggVs8IAPRpg0z2anq6G8oXZTSOmvVgVG1TBbExA771BQK6m5cFBvc-Z0ObkL5wXoUXzh1Gy-I9zQ__");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-under-banner-gradient {
+  background: linear-gradient(90.31deg, #84A3B6 0.02%, #375F80 99.73%);
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bg-dashboard-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #eaf0f2 100%);
+}
+
+.bg-dashboard-dark {
+  background-color: #eaf0f2;
+}
+
+.dragovered {
+  @apply border-primary bg-dashboard-dark opacity-70;
+}
+
+.bg-playbar {
+  background-color: #517d98;
+}
+
+.bg-playbar-dark {
+  background-color: #101828;
+}
+
+a {
+  @apply relative;
+}
+
+a::after {
+content: "";
+@apply absolute left-0 -bottom-1 w-full h-[2px] bg-primary scale-x-0 transition-transform duration-300 ease-in-out opacity-80;
+}
+
+a:hover::after {
+@apply scale-x-100;
+}
+
+.list-disc li {
+  list-style-type: disc;
+  margin-left: 1.15rem;
+}
+
+.btn {
+  @apply  px-12 py-4 rounded
+}
+
+.tittle {
+  @apply font-medium text-dark opacity-90 text-4xl;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/** AUDIO PLAYER **/
+
+.rhap_container {
+  height: 80px; /* Ajusta la altura */
+  font-size: 18px; /* Aumenta el tamaño del texto */
+}
+
+.rhap_progress-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rhap_progress-indicator {
+  width: 15px;
+  height: 15px;
+}
+
+.rhap_current-time, .rhap_total-time {
+  font-size: 32px; /* Ajusta el tamaño del texto del tiempo */
+}
+
+.rhap_progress-filled {
+  background-color: #007bff; /* Color de la barra de progreso */
+}
+
+.rhap_additional-controls, .rhap_volume-controls {
+  @apply hidden;
+}
+
+.rhap_controls-section {
+  @apply justify-center;
+}
+
+.rhap_container {
+  @apply bg-transparent border-0 shadow-none;
+}
+
+.rhap_time {
+  @apply text-sm;
+}
+
+.rhap_progress-bar, .rhap_download-progress {
+  border-radius: 30px;
+  background-color: #101828;
+  height: 24px;
+  overflow: hidden;
+}
+
+.rhap_progress-filled {
+  border-radius: 30px;
+  background-color: #517d98;
+}
+
+.rhap_progress-indicator {
+  @apply hidden;
+}
+
+.rhap_button-clear {
+  /** quitamos el borde que sale cuando se hace click en el boton */
+  outline: none;
+}
