@@ -52,7 +52,7 @@ li {
 }
 
 .bg-dashboard-img {
-  background-image: url("https://github.com/nazhG-mk2/haiva/blob/main/public/dashboard_img.png?raw=true");
+  background-image: url("https://raw.githubusercontent.com/nazhG-mk2/haiva/refs/heads/main/public/signal-2024-10-07-084250_005.jpeg");
   background-size: cover;
   background-position: center;
 }
