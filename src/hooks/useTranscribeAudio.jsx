@@ -25,7 +25,7 @@ const useTranscribeAudio = () => {
             const base64Audio = await fileToBase64(file);
 
             // Realizar la petición fetch
-            const response = await fetch("http://3.238.82.169:8000/aim/2/transcribe", {
+            const response = await fetch("http://44.197.199.9:9006/transcribe", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

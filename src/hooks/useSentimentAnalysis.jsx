@@ -18,7 +18,7 @@ const useSentimentAnalysis = () => {
             formData.append("audio_file", file);
 
             // Usar axios para enviar el archivo al endpoint
-            const { data } = await axios.post("http://3.238.82.169:9006/compute", formData, {
+            const { data } = await axios.post("http://44.197.199.9:9006/compute", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
